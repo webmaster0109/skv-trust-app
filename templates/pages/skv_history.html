@@ -1,0 +1,44 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="page-content">
+
+    <!-- Ihbox Start -->
+    <section class="section-xl">
+    </section>
+    <!-- Ihbox End -->
+
+    <!-- Our History --> 
+    <section class="section-lgb">
+        <div class="pbmit-timeline">
+            <div class="container-fluid p-0">
+                <div class="swiper-slider pbmit-column-five pbmit-timeline-style-1" data-loop="false" data-autoplay="false" data-dots="false" data-arrows="false" data-columns="5" data-margin="30" data-effect="slide">
+                    <div class="swiper-wrapper">
+                        {% for history in skv_history %}
+                        <div class="pbmit-timeline-wrapper {% if forloop.counter|divisibleby:2 %}swiper-slide{% else %}pbmit-slide-odd swiper-slide{% endif %}">
+                            <div class="pbmit-same-height steps-media pbmit-feature-image">
+                               <img src="{{history.get_image_url}}" class="img-fluid" alt="{{history.title}}" width="100%">									
+                            </div>
+                            <div class="steps-dot">
+                                <i class="steps-dot-line"></i>
+                                <span class="dot"></span>
+                            </div>
+                            <div class="pbmit-same-height steps-content_wrap">
+                               <p class="pbmit-timeline-year">{{history.year}}</p>
+                               <h3 class="pbmit-timeline-title">{{history.title}}</h3>
+                               <p class="pbmit-timeline-desc">{{history.description}}</p>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our History End -->
+
+</div>
+<!-- Page Content End -->
+</div>
+{% endblock %}

@@ -1,0 +1,95 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+<!-- Page Content -->
+<div class="page-content">   
+            
+    <!-- Event Detail -->
+    <section class="site_content single_event_page">
+        <div class="container">
+            <div class="pbmit-single-event-wrapper">
+                <div class="pbmit-event-single-image">
+                    <img class="img-fluid w-100" src="{{skv_event_detail.get_image_url}}" alt="{{skv_event_detail.title}}">
+                </div>
+                <div class="pbmit-single-event-body">
+                    <div class="row">
+                        <div class="col-md-8 pbmit-single-event-left-content">
+                            <div class="pbmit-single-event-short-info">
+                                <div class="pbmit-event-details">
+                                    <div class="pbmit-event-organizer d-md-flex align-items-center">
+                                        <div class="pbmit-event-meta-line pbmit-event-time d-flex">
+                                            <i class="pbmit-base-icon-clock-1"></i>
+                                            <span class="pbmit-start-date">{{skv_event_detail.event_initial_date|date:'d M Y'}} - {{skv_event_detail.event_initial_date|date:'h:i A'}}</span>
+                                        </div>
+                                        <div class="pbmit-event-meta-line wpem-event-registration-date d-flex">
+                                            <i class="pbmit-base-icon-pin"></i>
+                                            <a href="{{skv_event_detail.event_location_link}}" target="_blank"> {{skv_event_detail.event_location}}</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="pbmit-single-event-body-content">
+                                <span class="pbmit-firstletter">{{skv_event_detail.description|safe}}</span>
+                            </div>
+                        </div>
+                        <div class="col-md-4 pbmit-single-event-right-content">
+                            <div class="pbmit-single-event-body-sidebar">
+                                <div class="pbmit-tab event_registration">
+                                    <p class="pbmit-registration-event-button">
+                                        <a class="btn" data-bs-toggle="collapse" href="event-single-details.html#collapseExample" role="button" aria-expanded="false" aria-controls="collapseExample">
+                                            Watch Live
+                                        </a>
+                                    </p>
+                                    <div class="collapse" id="collapseExample">
+                                        <div class="registration-details">
+                                            <div><strong>Follow us on social media</strong> to get notified about the live event</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="pbmit-single-event-sidebar-info">
+                                    <div class="pbmit-event-sidebar-info pbmit-event-time-wrap">
+                                        <h3 class="pbmit-heading-text">Organizer :</h3>
+                                        <div class="pbmit-event-date-time">
+                                            <span class="pbmit-event-date-time-text">
+                                                <span class="pbmit-event-meta-time">{{skv_event_detail.event_organizer}}</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="pbmit-event-sidebar-info pbmit-event-location-wrap">
+                                        <h3 class="pbmit-heading-text">Location :</h3>
+                                        <div>
+                                           <a href="{{skv_event_detail.event_location_link}}" target="_blank" style="text-decoration: underline;">Click here to view location</a>
+                                        </div>
+                                    </div>
+                                    <div class="pbmit-event-sidebar-info pbmit-event-visitor-wrap">
+                                        <h3 class="pbmit-heading-text">Contact Details :</h3>
+                                        <div class="pbmit-event-visitor"> {{skv_event_detail.event_contact}}</div>
+                                    </div>
+                                    <div class="pbmit-event-sidebar-info pbmit-event-share-btn">
+                                        <h3 class="pbmit-heading-text">Share :</h3>
+                                        <ul class="pbmit-social-links">
+                                            <li class="pbmit-social-li pbmit-social-facebook">
+                                                <a title="Facebook" href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri|urlencode }}&quote={{ skv_event_detail.title|urlencode }}" target="_blank">
+                                                    <span><i class="pbmit-base-icon-facebook-f"></i></span>
+                                                </a>
+                                            </li>
+                                            <li class="pbmit-social-li pbmit-social-twitter">
+                                                <a title="Twitter" href="https://twitter.com/intent/tweet?text={{ skv_event_detail.title|urlencode }}&url={{ request.build_absolute_uri|urlencode }}" target="_blank">
+                                                    <span><i class="pbmit-base-icon-twitter-2"></i></span>
+                                                </a>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Event Detail End -->
+
+</div>
+<!-- Page Content End -->
+{% endblock %}

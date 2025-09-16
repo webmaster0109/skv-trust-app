@@ -1,0 +1,14 @@
+<div class="pbmit-slider-area pbmit-slider-two mt-3">
+    <div class="swiper-slider" data-autoplay="true" data-loop="true" data-dots="true" data-arrows="false" data-columns="1" data-margin="0" data-effect="fade">
+        <div class="swiper-wrapper">
+             {% for banner in banners %}
+            <div class="swiper-slide">
+                <div class="pbmit-slider-item">
+                    <div class="pbmit-slider-bg" style="background-image: url({{banner.get_image_url}});" alt="{{banner.title}}" title="{{banner.title}}"></div>
+                </div>
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>

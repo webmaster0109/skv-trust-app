@@ -1,0 +1,94 @@
+{% extends 'base/index.html' %}
+
+{% block content %}
+<div class="page-content about-us">
+
+    <!-- About Start -->
+    <section class="section-lgx">
+        <div class="container">
+            <div class="row g-0 align-items-center"> 
+                <div class="col-md-12 col-xl-6">
+                    <div class="about-three-content">
+                        <div class="pbmit-heading-subheading animation-style3">
+                            <h4 class="pbmit-subtitle">About</h4>
+                            <h2 class="pbmit-title">Shrikant Verma Trust</h2>
+                            <div class="pbmit-heading-desc">
+                                The Shrikant Verma Charitable Trust was established in 1987 in memory of the late Indian poet, writer, and politician Shrikant Verma. The trust was founded by his family to honor his legacy and support initiatives in arts, literature, education, and community welfare.
+                            </div>
+                        </div>
+                        <style>
+                            .list-group .list-group-item {
+                                align-items: baseline !important;
+                            }
+                        </style>
+                        <ul class="list-group mb-5">
+                            <li class="list-group-item">
+                                <span class="pbmit-icon-list-icon">
+                                    <i aria-hidden="true" class="pbmit-base-icon-check-mark"></i>
+                                </span>
+                                <span class="pbmit-icon-list-text">
+                                    <b>Purpose:</b> To honor the legacy of Shrikant Verma by supporting his vision for society, which involved advancing arts, literature, journalism, and community welfare. 
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pbmit-icon-list-icon">
+                                    <i aria-hidden="true" class="pbmit-base-icon-check-mark"></i>
+                                </span>
+                                <span class="pbmit-icon-list-text">
+                                    <b>Establishment:</b> Founded in 1989 by his son, Abhishek Verma.
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pbmit-icon-list-icon">
+                                    <i aria-hidden="true" class="pbmit-base-icon-check-mark"></i>
+                                </span>
+                                <span class="pbmit-icon-list-text">
+                                    <b>Activities:</b><br>
+                                    <p>Supporting arts, literature, and journalism<br>
+                                    Promoting education and community welfare<br>
+                                    Providing financial assistance to needy individuals</p>
+                                </span>
+                            </li>
+                            <li class="list-group-item">
+                                <span class="pbmit-icon-list-icon">
+                                    <i aria-hidden="true" class="pbmit-base-icon-check-mark"></i>
+                                </span>
+                                <span class="pbmit-icon-list-text">
+                                    <b>Public Involvement:</b> The trust and its family members, such as Anca Verma, represent the family at public events, emphasizing themes of empowerment and cultural heritage. 
+                                </span>
+                            </li>
+                        </ul>
+                        <a href="{% url 'skv_history' %}" class="pbmit-btn pbmit-btn-outline">
+                            <span class="pbmit-button-content-wrapper">
+                                <span class="pbmit-button-text">
+                                    Know about SKV Trust History
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-12 col-xl-6">
+                    <div class="about-three-right-box">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="pbmit-bird-fly text-center">
+                                    <img src="/media/static/images/homepage-2/bg/bg-light.png" width="80%" alt="">
+                                </div>
+                                <div class="pbmit-animation-style7">
+                                    <img src="/media/static/images/homepage-2/skv-trust-1.jpg" width="100%" alt="">
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="pbmit-animation-style7 second-img">
+                                    <img src="/media/static/images/homepage-2/13.jpg" width="100%" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- About End -->
+</div>
+{% endblock %}

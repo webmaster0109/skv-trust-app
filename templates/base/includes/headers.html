@@ -1,0 +1,120 @@
+<header class="site-header header-style-2">
+    <div class="pbmit-pre-header-wrapper pbmit-color-blackish">
+        <div class="container">
+            <div class="pbmit-pre-header-content d-flex justify-content-between">
+                <div class="pbmit-pre-header-left">
+                    <ul class="pbmit-contact-info">
+                        <li><i class="pbmit-base-icon-location-2"></i> Shrikant Verma Trust, Bilaspur, Madhya Pradesh, India</li>
+                        <li><i class=" pbmit-base-icon-email"></i><a href="mailto:contact@thevermafamily.org" class="__cf_email__">contact@thevermafamily.org</a></li>
+                        <li><i class="pbmit-base-icon-phone-call-1"></i>+91 98114 32277</li>
+                    </ul>
+                </div>
+                <div class="pbmit-pre-header-right">
+                    <ul class="pbmit-social-links">
+                        <li class="pbmit-social-li pbmit-social-facebook">
+                            <a title="Facebook" href="javascript:void(0)" target="_blank">
+                                <span><i class="pbmit-base-icon-facebook-f"></i></span>
+                            </a>
+                        </li>
+                        <li class="pbmit-social-li pbmit-social-twitter">
+                            <a title="Twitter" href="javascript:void(0)" target="_blank">
+                                <span><i class="pbmit-base-icon-twitter-2"></i></span>
+                            </a>
+                        </li>
+                        <li class="pbmit-social-li pbmit-social-linkedin">
+                            <a title="LinkedIn" href="javascript:void(0)" target="_blank">
+                                <span><i class="pbmit-base-icon-linkedin-in"></i></span>
+                            </a>
+                        </li>
+                        <li class="pbmit-social-li pbmit-social-instagram">
+                            <a title="Instagram" href="javascript:void(0)" target="_blank">
+                                <span><i class="pbmit-base-icon-instagram"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="pbmit-main-header-area">
+        <div class="container">
+            <div class="pbmit-header-content d-flex justify-content-between align-items-center">
+                <div class="pbmit-logo-menuarea d-flex justify-content-between align-items-center">
+                    <div class="site-branding pbmit-logo-area">
+                        <h1 class="site-title">
+                            <a href="/">
+                                <img class="logo-img" src="https://thevermafamily.org/media/images/logo/logo.png" alt="Shrikant Verma Trust Logo" style="min-height: 80px !important;">
+                            </a>
+                        </h1>
+                    </div>
+                    <div class="site-navigation">
+                        <nav class="main-menu navbar-expand-xl navbar-light">
+                        <div class="navbar-header">
+                            <!-- Toggle Button --> 
+                            <button class="navbar-toggler" type="button">
+                                <i class="pbmit-base-icon-menu-1"></i>
+                            </button>
+                        </div>
+                        <div class="pbmit-mobile-menu-bg"></div>
+                        <div class="collapse navbar-collapse clearfix show" id="pbmit-menu">
+                            <div class="pbmit-menu-wrap">
+                                <span class="closepanel">
+                                    <svg class="qodef-svg--close qodef-m" xmlns="http://www.w3.org/2000/svg" width="20.163" height="20.163" viewBox="0 0 26.163 26.163">
+                                        <rect width="36" height="1" transform="translate(0.707) rotate(45)"></rect>
+                                        <rect width="36" height="1" transform="translate(0 25.456) rotate(-45)"></rect>
+                                    </svg>
+                                </span>
+                                <ul class="navigation clearfix">
+                                    {% url 'home' as home_url %}
+                                    <li class="dropdown {% if request.path == home_url %}active{% endif %}">
+                                        <a href="{{home_url}}">Home</a>
+                                    </li>
+                                    {% url 'about' as about_url %}
+                                    <li class="dropdown {% if request.path == about_url %}active{% endif %}">
+                                        <a href="{{about_url}}">About</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Events</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">Gallery</a>
+                                    </li>
+                                    <li class="dropdown">
+                                        <a href="#">News</a>
+                                    </li>
+                                    {% url 'skv_history' as skv_history_url %}
+                                    <li class="{% if request.path == skv_history_url %}active{% endif %}">
+                                        <a href="{{skv_history_url}}">History</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        </nav>
+                    </div>
+                </div>
+                <div class="pbmit-right-box d-flex align-items-center">
+                    <div class="pbmit-header-search-btn">
+                        <a href="#">
+                            <i class="pbmit-base-icon-search-1"></i>
+                        </a>
+                    </div>
+                    <div class="pbmit-button-box-second">
+                        <a href="#contact-us" class="pbmit-btn">
+                            <span class="pbmit-button-content-wrapper">
+                                <span class="pbmit-button-text">
+                                    Contact us
+                                </span>
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    {% comment %} If user in landing page {% endcomment %}
+    {% if request.path == '/' %}
+    {% include 'base/hero/index.html' %}
+    {% endif %}
+
+</header>
